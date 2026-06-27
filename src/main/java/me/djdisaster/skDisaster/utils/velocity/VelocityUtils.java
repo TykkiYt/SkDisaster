@@ -63,7 +63,7 @@ public class VelocityUtils implements PluginMessageListener {
 
     @Override
     public void onPluginMessageReceived(String channel, Player player, byte[] message) {
-        if (!channel.equals("BungeeCord")) {
+        if (!channel.equalsIgnoreCase("BungeeCord") && !channel.equalsIgnoreCase("bungeecord:main")) {
             return;
         }
 
